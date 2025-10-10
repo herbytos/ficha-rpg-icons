@@ -1,6 +1,3 @@
-Claro! Um bom README.md é essencial para qualquer projeto. Ele é a porta de entrada para outros desenvolvedores e usuários.
-
-Aqui está um template completo e bem-estruturado para o seu projeto de ficha interativa de ICONS. Ele está em Markdown, pronto para ser copiado para um arquivo chamado README.md na raiz do seu projeto. Basta preencher as seções que marquei como [SUA INFORMAÇÃO AQUI].
 
 Ficha Interativa para ICONS RPG
 <p align="center">
