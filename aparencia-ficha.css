@@ -75,6 +75,12 @@ head {
 	margin-left: 220px;
 }
 
+.nivel-heroi {
+    margin-top: -70px;
+    margin-left: 600px;
+    position: absolute;
+}
+
 
 /* Estilo para o input do nivel */
 .nivel {
@@ -172,7 +178,7 @@ head {
     position: absolute;
     background-color: #2d2d2d;
     top: 310px; 
-    left: 1090px; 
+    left: 1110px; 
     background-color: #2d2d2d; 
     width: 150px;
     height: 150px;
