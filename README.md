@@ -17,13 +17,8 @@ Sobre o Projeto
 
 🛠️ Tecnologias Utilizadas
 
-🚀 Como Executar
 
-🤝 Como Contribuir
-
-📄 Licença
-
-📖 Sobre o Projeto
+## 📖 Sobre o Projeto
 Este projeto nasceu da necessidade de ter uma alternativa moderna e prática às fichas de papel para o sistema de RPG de super-heróis ICONS. O objetivo é criar uma experiência de usuário fluida, onde jogadores e mestres possam gerenciar personagens de forma rápida, com cálculos automáticos e uma interface intuitiva.
 
 Chega de apagar e reescrever pontos de Determinação ou fazer contas de poder no meio da ação!
@@ -45,8 +40,12 @@ Chega de apagar e reescrever pontos de Determinação ou fazer contas de poder n
 
 [ ] Design Responsivo: Acesse sua ficha no computador, tablet ou celular.
 
-📸 Screenshot
-🛠️ Tecnologias Utilizadas
+## 📸 Screenshot
+
+<img width="1919" height="974" alt="image" src="https://github.com/user-attachments/assets/991a24b6-7590-4bfd-a855-9b5175d6dd64" />
+
+
+## 🛠️ Tecnologias Utilizadas
 Este projeto foi construído utilizando as seguintes tecnologias:
 
 Frontend:
@@ -57,14 +56,5 @@ CSS3
 
 JavaScript
 
-[React.js | Vue.js | Svelte | etc.] -   Ferramentas:
 
-[Vite | Webpack] -   [ESLint | Prettier] ## 🚀 Como Executar
-
-Siga os passos abaixo para executar o projeto em seu ambiente local.
-
-Pré-requisitos:
-
-Node.js (versão X.X.X)
-
-NPM ou Yarn
+Feito por herbyy. 
