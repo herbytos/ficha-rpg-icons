@@ -19,7 +19,7 @@ head {
     height: auto;
     border-radius: 10px;
     object-fit: cover;
-    margin-top: -20px;
+    margin-top: -35px;
     margin-left: -20px;
     border-color: #3a3a3a;
 }
@@ -70,6 +70,10 @@ head {
     width: 50px;
 }
 
+.habilidade {
+    align-items: center;
+    flex-direction: column;
+}
 
 /* Estilo para o input dos atributos */
 .atributos {
@@ -152,11 +156,33 @@ head {
     margin-left: 1px;
 }
 
-.energia-determinacao {
-    font-size: 20px;
-    margin: 0 10px 0 0;
-    display: inline-flex;
-    width: auto;
-    margin-top: -5000px;
-    margin-left: 1px;
+.energia {
+    position: absolute;
+    background-color: #2d2d2d;
+    top: 310px; 
+    left: 1090px; 
+    background-color: #2d2d2d; 
+    width: 150px;
+    height: 150px;
+    border-radius: 20px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    display: flex;                 
+    flex-direction: column;        
+    justify-content: flex-start;   
+    align-items: center;  
 }
+
+.titulo {
+  color: white;
+  font-size: 30px; 
+  font-weight: bold;
+
+}
+
+.valor-energia { 
+    color: white;
+  font-size: 60px; 
+  font-weight: bold;
+  margin-top: 0px; 
+  }

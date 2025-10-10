@@ -59,3 +59,25 @@ function atualizarQualidade(event) {
         cardQualidade.textContent = qualidade;
     }
 }
+
+const inputVigor = document.querySelector('input[name="vigor"]');
+const inputVontade = document.querySelector('input[name="vontade"]');
+const pEnergia = document.querySelector('.valor-energia'); 
+
+// 2. Cria a função que calcula e atualiza a energia
+function calcularEnergia() {
+    // Pega os valores dos inputs e converte para número. Usa '|| 0' para evitar erros.
+    const valorVigor = parseInt(inputVigor.value) || 0;
+    const valorVontade = parseInt(inputVontade.value) || 0;
+
+    // Soma os dois valores para obter a energia total
+    const energiaTotal = valorVigor + valorVontade;
+
+    // Atualiza o texto do parágrafo de energia com o resultado
+    pEnergia.textContent = energiaTotal;
+}
+
+// 3. Adiciona "escutadores de eventos" aos inputs corretos
+// A função 'calcularEnergia' será chamada sempre que Vigor ou Vontade mudarem
+inputVigor.addEventListener('input', calcularEnergia);
+inputVontade.addEventListener('input', calcularEnergia);
