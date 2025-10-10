@@ -3,7 +3,7 @@
 <p align="center">
 <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" alt="Status do Projeto">
 <img src="https://img.shields.io/badge/licen%C3%A7a-MIT-blue" alt="Licença">
-<img src="https://img.shields.io/github/last-commit/[SEU-USUARIO-GITHUB]/[SEU-REPOSITORIO]" alt="Último Commit">
+<img src="https://img.shields.io/github/last-commit/herby/ficha-rpg-icons" alt="Último Commit">
 </p>
 
 Uma ficha de personagem digital e interativa para o sistema de RPG ICONS, projetada para agilizar a criação de heróis, o gerenciamento de atributos e a jogabilidade durante as sessões.
