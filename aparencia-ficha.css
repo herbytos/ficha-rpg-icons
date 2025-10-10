@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Racing+Sans+One&display=swap');
+head {
+  background-color: #3a3a3a;
+  margin: 0;} 
+    body
+    {
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  background: #3a3a3a;
+
+}
+
+
+/* Estilo para a logo do RPG */
+.logo img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-color: #3a3a3a;
+}
+
+
+/* Estilo para a imagem do personagem */
+.imagem-personagem img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 240px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilo para o container da ficha */
+.container-ficha {
+    position: absolute;
+    margin-top: -180px;
+}
+
+
+/* Logo do RPG */
+.logo {
+
+	position: absolute;
+	top: 170px;
+	left: 210px;
+	padding: 20px;
+	border-radius: 10px;
+	}
+
+
+/* Estilo para o cabeçalho */
+.cabecalho {
+    margin-top: -80px;
+	top: 0;
+	left: 0;	
+	margin-left: 220px;
+}
+
+
+/* Estilo para o input do nivel */
+.nivel {
+    
+    width: 50px;
+}
+
+
+/* Estilo para o input dos atributos */
+.atributos {
+    size: 1PX;
+    width: 44px;
+    font-family: 'Racing Sans One', sans-serif; 
+    font-size: 20px; 
+    color: white; 
+    background-color: #2d2d2d; 
+    border: none; 
+    font-size: 20px; 
+    
+
+}
+
+
+/* Estilo para a seção de características */
+.card-quadrado {
+    position: absolute; /* Posicionamento absoluto */
+    right: 15px;        /* Distância da borda direita do card */
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 12px;
+    text-align: center;
+    font-size: 16px;
+    width: 100px;
+    margin: 0; /* Remove margens para não interferir */
+}
+
+
+/* Estilo para os atributos */
+.card-atributos {
+    position: relative; /* Necessário para o posicionamento absoluto funcionar */
+    background: #3d3d3d;
+    padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+    margin-top: 20px;
+    width: 290px;
+	padding-right: 40px; /* Aumenta o espaço à direita para os quadrados */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
+}
+
+
+.coluna-direita {
+	margin-top: 30px;
+}
+
+
+/* Estilo para a linha de ficha */
+.linha-ficha {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+
+/* Estilo para as informações adicionais */
+.informacoes2 {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    width: auto;
+    margin-top: -10px;
+    margin-left: 1px;
+}
+
+
+/* Estilo para os inputs das informações adicionais */
+.input-informacoes2 {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    width: auto;
+    margin-top: -10px;
+    margin-left: 1px;
+}
+
+.energia-determinacao {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    display: inline-flex;
+    width: auto;
+    margin-top: -5000px;
+    margin-left: 1px;
+}
