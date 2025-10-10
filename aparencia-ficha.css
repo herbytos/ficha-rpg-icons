@@ -4,12 +4,24 @@ head {
   margin: 0;} 
     body
     {
+        
   font-family: "Fugaz One", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: rgb(255, 255, 255);
   background: #3a3a3a;
 
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Itens um ao lado do outro */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Itens ficam um em cima do outro */
+    }
 }
 
 
