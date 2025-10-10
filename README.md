@@ -56,5 +56,8 @@ CSS3
 
 JavaScript
 
+## 📄 Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
 
 ## Feito por herby. 
