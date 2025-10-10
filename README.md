@@ -28,7 +28,7 @@ Este projeto nasceu da necessidade de ter uma alternativa moderna e prática às
 
 Chega de apagar e reescrever pontos de Determinação ou fazer contas de poder no meio da ação!
 
-✨ Funcionalidades
+#✨ Funcionalidades
 [x] Criação de Personagem: Interface guiada para criar seu herói do zero.
 
 [ ] Cálculos Automáticos: Atributos como Vigor e Esforço são calculados automaticamente.
