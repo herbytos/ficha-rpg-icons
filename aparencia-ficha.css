@@ -4,6 +4,7 @@ head {
   margin: 0;} 
     body
     {
+    border: 10px solid #3a3a3a;
         
   font-family: "Fugaz One", sans-serif;
   font-weight: 400;
@@ -15,7 +16,11 @@ head {
 
 .container {
     display: flex;
-    flex-direction: row; /* Itens um ao lado do outro */
+}
+
+.item {
+    flex-grow: 1;
+
 }
 
 @media (max-width: 768px) {
@@ -51,6 +56,7 @@ head {
 
 /* Estilo para o container da ficha */
 .container-ficha {
+    flex box-sizing: width: ;
     position: absolute;
     margin-top: -180px;
 }
@@ -203,4 +209,17 @@ head {
   font-size: 60px; 
   font-weight: bold;
   margin-top: 0px; 
+  }
+
+
+
+  @media screen and (max-width: 768px;) {
+    .colaborador img {
+        width: 30%;
+    }
+  }
+    
+
+  .container { 
+
   }
