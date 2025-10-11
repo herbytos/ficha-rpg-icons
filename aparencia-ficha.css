@@ -23,9 +23,11 @@ head {
 
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Itens ficam um em cima do outro */
+@media (min-width: 768px) {
+    .container-ficha {
+        width: 100%; /* Ocupa toda a largura da tela */
+        flex-direction: row; /* Itens em linha */
+        justify-content: space-between; /* Espaçamento entre os itens */
     }
 }
 
@@ -48,7 +50,7 @@ head {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 240px;
+    margin-top: 150px;
     border: 4px solid #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -75,10 +77,14 @@ head {
 
 /* Estilo para o cabeçalho */
 .cabecalho {
-    margin-top: -80px;
-	top: 0;
-	left: 0;	
-	margin-left: 220px;
+     position: relative; /* Necessário para o posicionamento absoluto funcionar */
+    background: #3a3a3a;
+    padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+    margin-top: 20px;
+    width: 1450px;
+	padding-right: 40px; /* Aumenta o espaço à direita para os quadrados */
 }
 
 .nivel-heroi {
@@ -183,8 +189,8 @@ head {
 .energia {
     position: absolute;
     background-color: #2d2d2d;
-    top: 310px; 
-    left: 1110px; 
+    top: -70px; 
+    left: 900px; 
     background-color: #2d2d2d; 
     width: 150px;
     height: 150px;
