@@ -78,7 +78,7 @@ head {
 
 /* Estilo para o container da ficha */
 .container-ficha {
-    flex box-sizing: width: ;
+    flex: box-sizing;
     position: absolute;
     margin-top: -180px;
 }
@@ -197,14 +197,7 @@ head {
 
 
 /* Estilo para os inputs das informações adicionais */
-.input-informacoes2 {
-    font-size: 20px;
-    margin: 0 10px 0 0;
-    display: inline-block;
-    width: auto;
-    margin-top: -10px;
-    margin-left: 1px;
-}
+
 
 .energia {
     position: absolute;
@@ -239,13 +232,8 @@ head {
 
 
 
-  @media screen and (max-width: 768px;) {
-    .colaborador img {
-        width: 30%;
-    }
-  }
+
+ 
     
 
-  .container { 
-
-  }
+ 
