@@ -1,115 +1,83 @@
-<html>
-	<!DOCTYPE html>
-	
-	<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="images/favicon.png" type="image/x-icon">
-		<title>FICHA RPG ICONS</title>
-	
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-	
-		<link rel="stylesheet" type="text/css" href="aparencia-ficha.css">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FICHA RPG ICONS</title>
 
-		
-	
-	</head>
-	<body>
-	
-	
-	
-	
-	<div class="container-ficha" >
-	
-		<!-- Logo do RPG -->
-		<header class="logo">
-			<img src="images/icone-ficha.png" alt="icone-ficha" >
-		</header>
-		<br>
-		<!-- Imagem do personagem -->
-		<main class="imagem-personagem">
-			<img inputmode="image" src="https://i.pinimg.com/236x/ed/1f/41/ed1f41959e7e9aa7fb0a18b76c6c2755.jpg" alt="sem-foto" >
-			
-		</main>
-	
-	
-	
-	  <!-- Cabeçalho com nome do herói e nível -->
-	 <header class="cabecalho">
-		<h1>Nome do Herói <input type="text" name="nome-personagem"  placeholder="Digite o nome do herói" style="font-family: 'Racing Sans One', sans-serif; font-size: 30px; color: white; background-color: #2d2d2d; border: none; border-bottom: 2px solid white; outline: none;" > </h1>
-			<h1 class="nivel-heroi">Nivel do Heroi <input type="number" name="nivel" class="nivel"  style="font-family: 'Racing Sans One', sans-serif; font-size: 30px; color: white; background-color: #2d2d2d; border: none; border-bottom: 2px solid white; outline: none;"> </h1>
-			<div class="energia"> 
-				<span class="titulo">Energia</span>
-				<p class="valor-energia">0</p>
-				</div>
-				
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="aparencia-ficha.css">
+</head>
 
-			<!-- Informações adicionais -->
-			<h2 class="informacoes2">Origem <input type="text" name="origem"  placeholder="Digite a origem" class="input-informacoes2" style="font-family: 'Racing Sans One', sans-serif; font-size: 30px; color: white; background-color: #2d2d2d; border: none; border-bottom: 2px solid white; outline: none;"> </h2>
+<body>
+    <div class="container-ficha">
+        <header class="logo">
+            <img src="images/icone-ficha.png" alt="icone-ficha">
+        </header>
+        <br>
+        <div class="imagem-personagem">
+            <img src="https://i.pinimg.com/236x/ed/1f/41/ed1f41959e7e9aa7fb0a18b76c6c2755.jpg" alt="sem-foto">
+        </div>
 
-			<h2 class="informacoes2">Identidade secreta <input type="text" name="identidade"  class="input-informacoes2" placeholder="Digite a identidade" style="font-family: 'Racing Sans One', sans-serif; font-size: 30px; color: white; background-color: #2d2d2d; border: none; border-bottom: 2px solid white; outline: none;"> </h2>
+        <div class="cabecalho">
+            <h1>Nome do Herói <input type="text" name="nome-personagem" placeholder="Digite o nome do herói" class="input-ficha"> </h1>
+            <h1 class="nivel-heroi">Nivel do Heroi <input type="number" name="nivel" class="nivel input-ficha"> </h1>
+            <div class="energia">
+                <span class="titulo">Energia</span>
+                <p class="valor-energia">0</p>
+            </div>
 
-			<h2 class="informacoes2"> Equipe <input type="text" name="equipe"  class="input-informacoes2" placeholder="Digite a equipe" style="font-family: 'Racing Sans One', sans-serif; font-size: 30px; color: white; background-color: #2d2d2d; border: none; border-bottom: 2px solid white; outline: none;"> </h2>
+            <h2 class="informacoes2">Origem <input type="text" name="origem" placeholder="Digite a origem" class="input-ficha"> </h2>
+            <h2 class="informacoes2">Identidade secreta <input type="text" name="identidade" class="input-ficha" placeholder="Digite a identidade" class="input-ficha"> </h2>
+            <h2 class="informacoes2"> Equipe <input type="text" name="equipe" class="input-ficha" placeholder="Digite a equipe" class="input-ficha"> </h2>
+        </div>
 
+        <main class="corpo-principal">
+            <div class="card-atributos">
+                <h2 class="habilidades">Habilidades</h2>
 
-	
-	 </header>
-	
-	
-	 <!-- Colunas-->
-	<main class="corpo-principal">
-	
-		<!-- Coluna Atributos -->
-		<div class="card-atributos">
-			<h2 class="habilidades">Habilidades</h2> 
-	
-			<div class="linha-atributo">
-				<span>Proeza <input type="number" value="0" name="proeza" class="atributos" id="proezainput"  maxlength="2" style="font-family: 'Racing Sans One', sans-serif; font-size: 20px; color: white; background-color: #2d2d2d; border: none;"></span>
-				<span class="card-quadrado"> HORRÍVEL  </span>
-			</div>
-			<br>
-			<div class="linha-atributo">
-				<span>Coordenação <input type="number" value="0" name="coordenacao" class="atributos" id="coordenacaoinput"  maxlength="2" style="font-family: 'Racing Sans One', sans-serif; font-size: 20px; color: white;" ></span>
-				<span class="card-quadrado">HORRÍVEL</span>
-			</div>
-			<br>
-			<div class="linha-atributo">
-				<span>
-					Vigor <input type="number" name="vigor" value="0" class="atributos" style="font-family: 'Racing Sans One', sans-serif; font-size: 20px; color: white"> </span>
-				<span class="card-quadrado">HORRÍVEL</span>
-			</div>
-			<br>
-			<div class="linha-atributo">
-				<span>Intelecto <input type="number" name="intelecto" value="0" class="atributos" id="intelectoinput" width="10px" maxlength="2" style="font-family: 'Racing Sans One', sans-serif; font-size: 20px; color: white;"></span>
-				<span class="card-quadrado">HORRÍVEL</span>
-			</div>
-			<br>
-			<div class="linha-atributo">
-				<span>Atenção <input type="number" name="atencao" value="0" class="atributos" id="atencaoinput"  maxlength="2" style="font-family: 'Racing Sans One', sans-serif; font-size: 20px; color: white;"></span>
-				<span class="card-quadrado">HORRÍVEL</span>
-			</div>
-			<br>
-			<div class="linha-atributo">
-				<span>Vontade <input type="number" name="vontade" value="0" class="atributos" id="vontadeinput"  maxlength="2" style="font-family: 'Racing Sans One', sans-serif; font-size: 20px; color: white; "></span>
-				<span class="card-quadrado">HORRÍVEL</span>
-			</div>
-		</div>
-	</section>
-	
-	
-	
-	<section class="coluna-direita">
-		</section>
-	</main>
-	
-	</div>
-	
-	
-	<script src="script.js"></script>
-	</body>
+                <div class="linha-atributo">
+                    <span>Proeza <input type="number" value="0" name="proeza" class="atributos input-ficha" id="proezainput" maxlength="2"></span>
+                    <span class="card-quadrado"> HORRÍVEL </span>
+                </div>
+                <br>
+                <div class="linha-atributo">
+                    <span>Coordenação <input type="number" value="0" name="coordenacao" class="atributos input-ficha" id="coordenacaoinput" maxlength="2"></span>
+                    <span class="card-quadrado">HORRÍVEL</span>
+                </div>
+                <br>
+                <div class="linha-atributo">
+                    <span>Vigor <input type="number" name="vigor" value="0" class="atributos input-ficha"> </span>
+                    <span class="card-quadrado">HORRÍVEL</span>
+                </div>
+                <br>
+                <div class="linha-atributo">
+                    <span>Intelecto <input type="number" name="intelecto" value="0" class="atributos input-ficha" id="intelectoinput" maxlength="2"></span>
+                    <span class="card-quadrado">HORRÍVEL</span>
+                </div>
+                <br>
+                <div class="linha-atributo">
+                    <span>Atenção <input type="number" name="atencao" value="0" class="atributos input-ficha" id="atencaoinput" maxlength="2"></span>
+                    <span class="card-quadrado">HORRÍVEL</span>
+                </div>
+                <br>
+                <div class="linha-atributo">
+                    <span>Vontade <input type="number" name="vontade" value="0" class="atributos input-ficha" id="vontadeinput" maxlength="2"></span>
+                    <span class="card-quadrado">HORRÍVEL</span>
+                </div>
+            </div>
+            
+             <section class="coluna-direita">
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

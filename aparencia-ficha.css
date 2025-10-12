@@ -32,6 +32,26 @@ head {
 }
 
 
+.input-ficha {
+    font-family: 'Racing Sans One', sans-serif;
+    color: white;
+    background-color: #2d2d2d;
+    border: none;
+    outline: none;
+}
+
+/* Estilo específico para os inputs maiores no cabeçalho */
+.cabecalho .input-ficha {
+    font-size: 30px;
+    border-bottom: 2px solid white;
+}
+
+/* Estilo específico para os inputs menores nos atributos */
+.card-atributos .input-ficha {
+    font-size: 20px;
+}
+
+
 /* Estilo para a logo do RPG */
 .logo img {
     width: 400px;
