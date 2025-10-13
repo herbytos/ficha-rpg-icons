@@ -94,6 +94,14 @@ const toastMessage = document.getElementById('messangem');
 // Variável para controlar o timer
 let timerId = null;
 
+
+toastNotification.addEventListener('click', () => {
+    clearTimeout(timerId);
+    toastNotification.classList.remove('show');
+});
+
+
+
 // 2. Adiciona um "ouvinte" ao INPUT. O evento 'input' dispara a cada mudança.
 meuInput.addEventListener('input', function() {
     // Pega o valor que está atualmente no campo de texto
@@ -131,7 +139,7 @@ function showToast(message) {
 
 
 
-
+// SALVAR E CARREGAR DADOS DA FICHA
 const inputsdaficha = document.querySelectorAll('.container-ficha input');
 
 
@@ -139,6 +147,7 @@ const botaoSalvar = document.getElementById('salvar');
 const botaoCarregar = document.getElementById('carregar');
 
 
+// Função para salvar os dados da ficha no localStorage
 function salvarDados() {
 
     const dadosParaSalvar = {};
@@ -160,6 +169,8 @@ function salvarDados() {
 
     }
 
+
+// Função para carregar os dados da ficha do localStorage
 function carregarDados() {
     const fichasalva = localStorage.getItem('dadosFichaRPG');
     if (fichasalva) {
