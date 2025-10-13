@@ -43,7 +43,7 @@ head {
 
 }
 
-#salvar, #carregar {
+#salvar, #carregar, #livro {
     background-color: #2d2d2d;
     border: none;
     padding: 10px;
