@@ -1,5 +1,7 @@
 
 
+
+
 // 1. Seleciona TODOS os inputs de uma vez só pela classe '.atributos'
 const todosOsInputs = document.querySelectorAll('.atributos');
 
@@ -81,3 +83,104 @@ function calcularEnergia() {
 // A função 'calcularEnergia' será chamada sempre que Vigor ou Vontade mudarem
 inputVigor.addEventListener('input', calcularEnergia);
 inputVontade.addEventListener('input', calcularEnergia);
+
+
+
+// Descrição da origem no toast
+const meuInput = document.getElementById('meu-input');
+const toastNotification = document.getElementById('notificacao');
+const toastMessage = document.getElementById('messangem');
+
+// Variável para controlar o timer
+let timerId = null;
+
+// 2. Adiciona um "ouvinte" ao INPUT. O evento 'input' dispara a cada mudança.
+meuInput.addEventListener('input', function() {
+    // Pega o valor que está atualmente no campo de texto
+    const valorAtual = this.value;
+
+    // --- O PULO DO GATO ---
+    // Procura por um elemento <option> dentro do datalist
+    // que tenha o 'value' EXATAMENTE igual ao valor do input.
+    const opcaoCorrespondente = document.querySelector(`#lista-de-origens option[value="${valorAtual}"]`);
+    
+    
+
+    // Se uma opção correspondente foi encontrada (ou seja, o usuário selecionou ou digitou um valor válido)...
+    if (opcaoCorrespondente) {
+        // ...chama a função para mostrar a notificação.
+        const mensagem = opcaoCorrespondente.dataset.descricao
+        showToast(mensagem);
+    }
+});
+
+
+// 3. Função para mostrar o Toast 
+function showToast(message) {
+    if (timerId) {
+        clearTimeout(timerId);
+    }
+
+    toastMessage.textContent = message;
+    toastNotification.classList.add('show');
+
+    timerId = setTimeout(() => {
+        toastNotification.classList.remove('show');
+    }, 30000); // A notificação fica visível por 30 segundos
+}
+
+
+
+
+const inputsdaficha = document.querySelectorAll('.container-ficha input');
+
+
+const botaoSalvar = document.getElementById('salvar');
+const botaoCarregar = document.getElementById('carregar');
+
+
+function salvarDados() {
+
+    const dadosParaSalvar = {};
+    inputsdaficha.forEach(input => {
+        const energia = energiavalor.textContent;
+        dadosParaSalvar['energia'] = energia;
+        const chave = input.id;
+        const valor = input.value;
+        dadosParaSalvar[chave] = valor;
+
+    });
+
+    console.log(dadosParaSalvar);
+
+    const dadosJSON = JSON.stringify(dadosParaSalvar);
+    localStorage.setItem('dadosFichaRPG', dadosJSON);
+
+    alert('Ficha salva com sucesso!');
+
+    }
+
+function carregarDados() {
+    const fichasalva = localStorage.getItem('dadosFichaRPG');
+    if (fichasalva) {
+        const dadosCarregados = JSON.parse(fichasalva);
+
+        for (const chave in dadosCarregados) {
+            const input = document.getElementById(chave);
+            if (input) {
+                input.value = dadosCarregados[chave];
+            }
+        }
+
+
+        calcularEnergia();   
+        alert('Dados carregados com sucesso!');
+    } else {
+        alert('Nenhum dado salvo encontrado.');
+    }
+
+}
+
+
+botaoSalvar.addEventListener('click', salvarDados);
+botaoCarregar.addEventListener('click', carregarDados);

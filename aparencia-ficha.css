@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Fugaz+One&family=Luckiest+Guy&family=Pacifico&family=Racing+Sans+One&family=Story+Script&display=swap');
+
+
 head {
   background-color: #3a3a3a;
   margin: 0;} 
-    body
-    {
+    body{
     border: 10px solid #3a3a3a;
-        
-  font-family: "Fugaz One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: rgb(255, 255, 255);
-  background: #3a3a3a;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    background: #3a3a3a;
+    font-family: "Fugaz One", sans-serif;
+  
+
 
 }
 
@@ -32,8 +34,26 @@ head {
 }
 
 
+.opcoes {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    gap: 20px;
+    display: flex;
+
+}
+
+#salvar, #carregar {
+    background-color: #2d2d2d;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 .input-ficha {
-    font-family: 'Racing Sans One', sans-serif;
+    font-family: "Fugaz One", sans-serif;
     color: white;
     background-color: #2d2d2d;
     border: none;
@@ -42,9 +62,36 @@ head {
 
 /* Estilo específico para os inputs maiores no cabeçalho */
 .cabecalho .input-ficha {
-    font-size: 30px;
+    font-size: 28px;
     border-bottom: 2px solid white;
 }
+
+
+#notificacao { 
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2c2c2c;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transform: translateX(120%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    pointer-events: none;
+    max-width: 350px;
+}
+
+#notificacao.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
 
 /* Estilo específico para os inputs menores nos atributos */
 .card-atributos .input-ficha {
@@ -150,7 +197,7 @@ head {
     padding: 6px 12px;
     text-align: center;
     font-size: 16px;
-    width: 100px;
+    width: 120px;
     margin: 0; /* Remove margens para não interferir */
 }
 
@@ -216,12 +263,50 @@ head {
     align-items: center;  
 }
 
+.determinacao {
+    position: absolute;
+    background-color: #2d2d2d;
+    top: -70px; 
+    left: 1070px; 
+    background-color: #2d2d2d; 
+    width: 190px;
+    height: 150px;
+    border-radius: 20px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    display: flex;                 
+    flex-direction: column;        
+    justify-content: flex-start;   
+    align-items: center;  
+}
+
 .titulo {
   color: white;
   font-size: 30px; 
   font-weight: bold;
 
 }
+
+.titulo-determinacao {
+  color: white;
+  font-size: 23px; 
+  font-weight: bold;
+  min-width: 1px;
+
+}
+
+.input-ficha-determinacao {
+    font-family: "Fugaz One", sans-serif;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 60px; 
+    width: 130px; 
+    text-align: center; 
+    margin-top: 10px;
+    font-weight: bold;
+    }
 
 .valor-energia { 
     color: white;

@@ -8,11 +8,12 @@
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Fugaz+One&family=Luckiest+Guy&family=Pacifico&family=Racing+Sans+One&family=Story+Script&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="aparencia-ficha.css">
+
+
 </head>
 
 <body>
@@ -25,17 +26,72 @@
             <img src="https://i.pinimg.com/236x/ed/1f/41/ed1f41959e7e9aa7fb0a18b76c6c2755.jpg" alt="sem-foto">
         </div>
 
+
+        <div class="opcoes">
+            <button id="salvar"> <img src="images/download.svg" alt="Salvar Ficha"> </button>
+            <button id="carregar"> <img src="images/upload.svg" alt="Carregar Ficha">  </button>
+        </div>
+
         <div class="cabecalho">
-            <h1>Nome do Herói <input type="text" name="nome-personagem" placeholder="Digite o nome do herói" class="input-ficha"> </h1>
-            <h1 class="nivel-heroi">Nivel do Heroi <input type="number" name="nivel" class="nivel input-ficha"> </h1>
+            <h1>Nome do Herói <input type="text" id="nome-personagem" placeholder="Digite o nome do herói" class="input-ficha"> </h1>
+
+
+            <h1 class="nivel-heroi">Nivel do Herói <input type="number" id="nivel" class="nivel input-ficha"> </h1>
+
+
             <div class="energia">
                 <span class="titulo">Energia</span>
-                <p class="valor-energia">0</p>
+                <p class="valor-energia" id="energiavalor" in>0</p>
             </div>
 
-            <h2 class="informacoes2">Origem <input type="text" name="origem" placeholder="Digite a origem" class="input-ficha"> </h2>
-            <h2 class="informacoes2">Identidade secreta <input type="text" name="identidade" class="input-ficha" placeholder="Digite a identidade" class="input-ficha"> </h2>
-            <h2 class="informacoes2"> Equipe <input type="text" name="equipe" class="input-ficha" placeholder="Digite a equipe" class="input-ficha"> </h2>
+            <div class="determinacao">
+                <span class="titulo-determinacao">Determinação</span>
+                <input type="number" id="determinacao" value="0" class="input-ficha-determinacao">
+            </div>
+
+            <div id="notificacao">
+                <span id="messangem"></span>
+            </div>
+
+
+            <h2 class="informacoes2">Origem </h2>
+
+            <input type="text" name="origem1" id="meu-input" placeholder="Escolha a origem" class="input-ficha" list="lista-de-origens">
+
+            <datalist id="lista-de-origens">
+
+
+                 <option value="Treinado" data-descricao=" O HERÓI É UM SER HUMANO ALTAMENTE QUALIFICADO; TODOS OS SEUS “PODERES” VÊM DE TREINAMENTO FORTE OU DE EQUIPAMENTO ESPECIALIZADO. O PERSONAGEM GANHA DUAS ESPECIALIDADES ADICIONAIS E PODE OPTAR POR TROCAR UM PODER POR MAIS DUAS ESPECIALIDADES."></option>
+            
+
+
+                <option value="Transformado" data-descricao="O HERÓI ERA UM SER HUMANO NORMAL, MAS SE TORNOU UM SUPER-HUMANO POR MEIO DE ALGUM AGENTE EXTERNO, MUITAS VEZES UM ACIDENTE OU EXPERIÊNCIA. UMA DAS HABILIDADES DO PERSONAGEM À SUA ESCOLHA É AUMENTADA EM 2, PARA UM MÁXIMO DE 10."></option>
+
+
+                <option value="Nascido" data-descricao="O HERÓI NASCEU COM PODERES SUPER-HUMANOS OU FOI DESTINADO A DESENVOLVÊ-LOS. O PERSONAGEM GANHA UM PODER ADICIONAL À SUA ESCOLHA QUE DEVE SER INATO, E NÃO UM DISPOSITIVO OU +2 NO NÍVEL DE UM PODER ADQUIRIDO ALEATORIAMENTE À SUA ESCOLHA, ATÉ O MÁXIMO DE 10."></option>
+
+
+                <option value="Engenhocas" data-descricao="OS PODERES DO PERSONAGEM VÊM TODOS DE DISPOSITIVOS DE ALGUM TIPO. UM DOS ATRIBUTOS MENTAIS DO PERSONAGEM À SUA ESCOLHA É AUMENTADO EM 2, ATÉ UM MÁXIMO DE 10."></option>
+
+
+                <option value="Artificial" data-descricao="O PERSONAGEM É UM ROBÔ OU ALGUM OUTRO TIPO DE CONSTRUCTO, COMO UM GOLEM. O VIGOR DO PERSONAGEM É AUMENTADO EM 2 E ELE RECEBE O PODER SUPORTE DE VIDA, ALÉM DE QUAISQUER PODERES ESCOLHIDOS ALEATORIAMENTE; ROLE O NÍVEL DE SUPORTE DE VIDA NORMALMENTE, OU DESCARTE UM PODER ROLADO PARA AUMENTÁ-LO PARA 10."></option>
+
+
+                <option value="Extraterrestre" data-descricao="O PERSONAGEM É UM SER DE OUTRO MUNDO OU DIMENSÃO, COMO UM ALIENÍGENA, ELEMENTAL, ANJO, DEMÔNIO OU MESMO UMA DIVINDADE. AUMENTE DUAS HABILIDADES DO PERSONAGEM À SUA ESCOLHA EM 2. COMO ALTERNATIVA, ESCOLHA DUAS ORIGENS E PEGUE AS CARACTERÍSTICAS DE CADA."></option>
+
+
+            </datalist>
+
+
+
+            
+
+             
+            
+
+
+            <h2 class="informacoes2">Identidade secreta <input type="text" id="identidade" class="input-ficha" placeholder="Digite a identidade" class="input-ficha"> </h2>
+            <h2 class="informacoes2"> Equipe <input type="text" id="equipe" class="input-ficha" placeholder="Digite a equipe" class="input-ficha"> </h2>
         </div>
 
         <main class="corpo-principal">
@@ -53,7 +109,7 @@
                 </div>
                 <br>
                 <div class="linha-atributo">
-                    <span>Vigor <input type="number" name="vigor" value="0" class="atributos input-ficha"> </span>
+                    <span>Vigor <input type="number" name="vigor" value="0" class="atributos input-ficha" id="vigorinput" maxlength="2"> </span>
                     <span class="card-quadrado">HORRÍVEL</span>
                 </div>
                 <br>
@@ -72,9 +128,12 @@
                     <span class="card-quadrado">HORRÍVEL</span>
                 </div>
             </div>
+
+            <div class="card-poderes">
+
+            </div>
             
-             <section class="coluna-direita">
-            </section>
+             <div class="card-"></div>
         </main>
     </div>
 
