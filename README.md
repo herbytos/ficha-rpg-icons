@@ -26,7 +26,7 @@ Chega de apagar e reescrever pontos de Determinação ou fazer contas de poder n
 ## ✨ Funcionalidades
 [x] Criação de Personagem: Interface guiada para criar seu herói do zero.
 
-[ ] Cálculos Automáticos: Atributos como Vigor e Esforço são calculados automaticamente.
+[x] Cálculos Automáticos: Atributos como Energia são calculados automaticamente.
 
 [ ] Rolagem de Dados: Botões integrados para rolar dados de atributos e poderes diretamente na ficha.
 
@@ -34,11 +34,11 @@ Chega de apagar e reescrever pontos de Determinação ou fazer contas de poder n
 
 [ ] Controle de Pontos de Determinação: Gaste e recupere pontos com apenas um clique.
 
-[ ] Modo Noturno: Um tema escuro para sessões de jogo até tarde da noite.
+[x] Modo Noturno: Um tema escuro para sessões de jogo até tarde da noite.
 
-[ ] Exportar/Importar: Salve sua ficha como um arquivo (JSON/PDF) e carregue-a em outros dispositivos.
+[x] Exportar/Importar: Salve sua ficha como um arquivo (JSON).
 
-[ ] Design Responsivo: Acesse sua ficha no computador, tablet ou celular.
+[x] Design Responsivo: Acesse sua ficha no computador, tablet ou celular.
 
 ## 📸 Screenshot
 
