@@ -15,6 +15,9 @@ function atualizarQualidade(event) {
 
     // 'event.target' é o input exato que o usuário alterou
     const inputAlterado = event.target;
+
+
+    const inputAtual = document.querySelectorAll('.atributos')
     
     // Pega o valor ATUAL do input e converte para um número
     const valor = parseInt(inputAlterado.value)
@@ -46,8 +49,7 @@ function atualizarQualidade(event) {
 
 
 
-
-
+    
     
 
     // Encontra o elemento pai '.linha-atributo' mais próximo do input que foi alterado.
@@ -61,6 +63,8 @@ function atualizarQualidade(event) {
         cardQualidade.textContent = qualidade;
     }
 }
+
+
 
 const inputVigor = document.querySelector('input[name="vigor"]');
 const inputVontade = document.querySelector('input[name="vontade"]');
@@ -184,7 +188,18 @@ function carregarDados() {
         }
 
 
-        calcularEnergia();   
+        calcularEnergia(); 
+
+
+        const todosOsInputsDeAtributo = document.querySelectorAll('.atributos');
+
+       
+        todosOsInputsDeAtributo.forEach(input => {
+            
+        
+            atualizarQualidade({ target: input });
+        });
+
         alert('Dados carregados com sucesso!');
     } else {
         alert('Nenhum dado salvo encontrado.');
