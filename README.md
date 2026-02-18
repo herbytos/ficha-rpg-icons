@@ -30,7 +30,7 @@ Chega de apagar e reescrever pontos de Determinação ou fazer contas de poder n
 
 [ ] Rolagem de Dados: Botões integrados para rolar dados de atributos e poderes diretamente na ficha.
 
-[ ] Gerenciamento de Poderes: Adicione e edite os poderes do seu personagem com facilidade.
+[x] Gerenciamento de Poderes: Adicione e edite os poderes do seu personagem com facilidade.
 
 [ ] Controle de Pontos de Determinação: Gaste e recupere pontos com apenas um clique.
 
