@@ -151,17 +151,23 @@ const botaoSalvar = document.getElementById('salvar');
 const botaoCarregar = document.getElementById('carregar');
 
 
-// Função para salvar os dados da ficha no localStorage
 function salvarDados() {
-
     const dadosParaSalvar = {};
+    
+    // Tirei a energia do forEach para não repetir a mesma ação várias vezes à toa!
+    const energia = energiavalor.textContent;
+    dadosParaSalvar['energia'] = energia;
+
+    // Salvamos a imagem convertida que está na tag <img>
+    dadosParaSalvar['fotoPersonagem'] = document.getElementById('profile-image').src;
+
     inputsdaficha.forEach(input => {
-        const energia = energiavalor.textContent;
-        dadosParaSalvar['energia'] = energia;
+        // IGNORA o input de imagem para não dar erro!
+        if (input.type === 'file') return; 
+
         const chave = input.id;
         const valor = input.value;
         dadosParaSalvar[chave] = valor;
-
     });
 
     console.log(dadosParaSalvar);
@@ -170,43 +176,61 @@ function salvarDados() {
     localStorage.setItem('dadosFichaRPG', dadosJSON);
 
     alert('Ficha salva com sucesso!');
+}
 
-    }
 
 
-// Função para carregar os dados da ficha do localStorage
 function carregarDados() {
     const fichasalva = localStorage.getItem('dadosFichaRPG');
     if (fichasalva) {
         const dadosCarregados = JSON.parse(fichasalva);
 
+        // 1. Carrega a imagem do personagem de volta
+        if (dadosCarregados['fotoPersonagem']) {
+            document.getElementById('profile-image').src = dadosCarregados['fotoPersonagem'];
+        }
+
+        // 2. Carrega a energia (caso precise atualizar na tela)
+        if (dadosCarregados['energia']) {
+            energiavalor.textContent = dadosCarregados['energia'];
+        }
+
+        // 3. Carrega os inputs normais
         for (const chave in dadosCarregados) {
+            // Pulamos as chaves customizadas para focar só nos inputs
+            if (chave === 'fotoPersonagem' || chave === 'energia') continue;
+
             const input = document.getElementById(chave);
             if (input) {
                 input.value = dadosCarregados[chave];
             }
         }
-
-
-        calcularEnergia(); 
-
-
-        const todosOsInputsDeAtributo = document.querySelectorAll('.atributos');
-
-       
-        todosOsInputsDeAtributo.forEach(input => {
-            
-        
-            atualizarQualidade({ target: input });
-        });
-
-        alert('Dados carregados com sucesso!');
-    } else {
-        alert('Nenhum dado salvo encontrado.');
     }
-
 }
 
+
+const profileImage = document.getElementById('profile-image');
+const fotoInput = document.getElementById('foto-input');
+
+profileImage.addEventListener('click', () => {
+    fotoInput.click();
+});
+
+fotoInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+
+    if (file) {
+        // Usamos o FileReader para ler a imagem e transformá-la em texto (Base64)
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+            // e.target.result contém a imagem gigante em formato de texto
+            profileImage.src = e.target.result;
+        };
+        
+        reader.readAsDataURL(file);
+    }
+});
 
 botaoSalvar.addEventListener('click', salvarDados);
 botaoCarregar.addEventListener('click', carregarDados);
