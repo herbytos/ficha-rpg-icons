@@ -106,6 +106,9 @@ toastNotification.addEventListener('click', () => {
 
 
 
+
+
+
 // 2. Adiciona um "ouvinte" ao INPUT. O evento 'input' dispara a cada mudança.
 meuInput.addEventListener('input', function() {
     // Pega o valor que está atualmente no campo de texto
@@ -127,19 +130,6 @@ meuInput.addEventListener('input', function() {
 });
 
 
-// 3. Função para mostrar o Toast 
-function showToast(message) {
-    if (timerId) {
-        clearTimeout(timerId);
-    }
-
-    toastMessage.textContent = message;
-    toastNotification.classList.add('show');
-
-    timerId = setTimeout(() => {
-        toastNotification.classList.remove('show');
-    }, 30000); // A notificação fica visível por 30 segundos
-}
 
 
 

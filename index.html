@@ -85,6 +85,74 @@
 
             </datalist>
 
+            <datalist id="lista-especializacoes">
+
+                <option value="Combate Aéreo" title=" Você é treinado para combater em pleno ar; som 
+                seu bônus de especialização aos testes defensivos de combate enquanto estiver planando ou voando." ></option>
+
+
+                <option value="Artes" data-especializacao="Envolve artes visuais e criativas; aplique seu bônus de especialização a testes relacionados à criação ou avaliação artística."></option>
+
+                <option value="Atletismo" data-especializacao="Some seu bônus de especialização aos testes de ações atléticas como acrobacia, escalada, saltos, corrida, natação ou atividades similares, incluindo esquivar em combate."></option>
+
+                <option value="Negócios" data-especializacao="Some seu bônus de especialização em testes envolvendo perspicácia nos negócios ou conhecimento do mundo dos negócios; aplica-se a profissões e perícias comerciais."></option>
+
+                <option value="Condução" data-especializacao="Some seu bônus de especialização em testes que envolvam operar veículos de superfície de todos os tipos; pode incluir veículos aquáticos salvo decisão do Mestre."></option>
+
+                <option value="Investigação" data-especializacao="Adicione seu bônus de especialização a testes de coleta e análise de provas, seguir pessoas e encontrar itens ou indivíduos perdidos."></option>
+
+                <option value="Direito" data-especializacao="Você tem experiência em leis e prática jurídica; adicione seu bônus de especialização em testes envolvendo conhecimento ou exercício da advocacia."></option>
+
+                <option value="Liderança" data-especializacao="Você é um líder competente; pode conceder Determinação adicional à equipe quando for o líder, e aplica-se a manobras táticas e criação/ativação de condições."></option>
+
+                <option value="Linguística" data-especializacao="Vocação para aprender línguas; some seu bônus de especialização ao Intelecto para determinar quantas línguas você fala."></option>
+
+                <option value="Artes Marciais" data-especializacao="Treinamento em combate desarmado; some seu bônus de especialização aos testes ofensivos e defensivos de combate desarmado (exceto Luta Livre)."></option>
+
+                <option value="Medicina" data-especializacao="Treinado em cuidados de saúde; adicione seu bônus de especialização ao nível da habilidade do paciente para determinar rapidez de recuperação."></option>
+
+                <option value="Resistência Mental" data-especializacao="Habilidade em resistir a influências externas e poderes mentais; adicione seu bônus de especialização à Vontade para resistir."></option>
+
+                <option value="Militarismo" data-especializacao="Experiência em unidade militar; adicione seu bônus de especialização à Iniciativa e a testes relativos a protocolos, informações e táticas militares."></option>
+
+                <option value="Ocultismo" data-especializacao="Bem-informado sobre oculto e misticismo; some seu bônus de especialização a testes envolvendo conhecimento, pesquisa ou prática do oculto."></option>
+
+                <option value="Performance" data-especializacao="Especializações em artes cênicas (Atuação, Dança, Música, Canto etc.); escolha uma forma de arte e aplique o bônus a testes nessa forma."></option>
+
+                <option value="Pilotagem" data-especializacao="Some seu bônus de especialização aos testes envolvendo operação de veículos aéreos e espaciais."></option>
+
+                <option value="Poderes" data-especializacao="Grupo que abrange poderes específicos; cada poder é uma especialização separada—some o bônus aos testes de habilidade do poder."></option>
+
+                <option value="Psiquiatria" data-especializacao="Treinado em saúde mental; o bônus aplica-se a avaliar estados mentais, notar influência externa, diagnosticar e tratar doenças mentais."></option>
+
+                <option value="Ciência" data-especializacao="Especialista em ciências; adicione seu bônus em testes envolvendo conhecimento científico, pesquisa e invenção."></option>
+
+                <option value="Prestidigitação" data-especializacao="Treinado em truques de destreza manual; some seu bônus de especialização em testes de habilidade manual e truques."></option>
+
+                <option value="Furtividade" data-especializacao="Some seu bônus de especialização aos testes para evitar ser notado ou se mover e agir secretamente."></option>
+
+                <option value="Tecnologia" data-especializacao="Some seu bônus de especialização a testes que envolvam criação, reparo ou trabalho com tecnologia e máquinas, incluindo computadores."></option>
+
+                <option value="Combate Submarino" data-especializacao="Hábil em combate debaixo d'água; adicione seu bônus aos testes defensivos de combate enquanto submerso."></option>
+
+                <option value="Armas - Lâminas" data-especializacao="Especialização no uso de armas de corte; some seu bônus aos testes de ataque com lâminas."></option>
+
+                <option value="Armas - Esmagadoras" data-especializacao="Especialização em armas de contusão; some seu bônus aos testes de ataque com armas esmagadoras."></option>
+
+                <option value="Armas - Arcos" data-especializacao="Especialização em arcos e bestas; some seu bônus aos testes de ataque com arcos."></option>
+
+                <option value="Armas - Fogo" data-especializacao="Especialização em armas de fogo; some seu bônus aos testes de ataque com armas de disparo autoalimentadas."></option>
+
+                <option value="Armas - Arremesso" data-especializacao="Especialização em arremesso de projéteis; aplique seu bônus a ataques de arremesso."></option>
+
+                <option value="Luta Livre" data-especializacao="Especialização em técnicas de Luta Livre; some seu bônus a testes para agarrar ou escapar de agarramentos."></option>
+
+            </datalist>
+
+
+
+
+
 
 
             
@@ -171,7 +239,50 @@
 
                 </div>
 
+
+
+
+
+
             </div>
+
+            <div class="card-especializacoes" id="inputs-espe">
+                    <h2 class="especializacoes">Especializações</h2>
+
+                    <div class="linha-especializacao">
+                        <input type="text" name="especializacao1" id="espe1" placeholder="Escolha a especializacao" class="input-ficha" list="lista-especializacoes">
+                        <input type="number" class ="atributos input-ficha" id="especializacaonivel1" maxlength="1" max="3">
+                        
+                        </div>
+                        <div class="linha-especializacao">
+                        <input type="text" name="especializacao2" id="espe2" placeholder="Escolha a especializacao" class="input-ficha" list="lista-especializacoes">
+                        <input type="number" class ="atributos input-ficha" id="especializacaonivel2" maxlength="1" max="3">
+                        
+                        </div>
+                        <div class="linha-especializacao">
+                        <input type="text" name="especializacao3" id="espe3" placeholder="Escolha a especializacao" class="input-ficha" list="lista-especializacoes">
+                        <input type="number" class ="atributos input-ficha" id="especializacaonivel3" maxlength="1" max="3">
+                        
+                        </div>
+                        <div class="linha-especializacao">
+                        <input type="text" name="especializacao4" id="espe4" placeholder="Escolha a especializacao" class="input-ficha" list="lista-especializacoes">
+                        <input type="number" class ="atributos input-ficha" id="especializacaonivel4" maxlength="1" max="3">
+                        
+                        </div>
+                        <div class="linha-especializacao">
+                        <input type="text" name="especializacao5" id="espe5" placeholder="Escolha a especializacao" class="input-ficha" list="lista-especializacoes">
+                        <input type="number" class ="atributos input-ficha" id="especializacaonivel5" maxlength="1" max="3">
+                        
+                        </div>
+                        <div class="linha-especializacao">
+                        <input type="text" name="especializacao6" id="espe6" placeholder="Escolha a especializacao" class="input-ficha" list="lista-especializacoes">
+                        <input type="number" class ="atributos input-ficha" id="especializacaonivel6" maxlength="1" max="3">
+                        
+                        </div>
+                        
+
+            
+                </div>
             
              <div class="card-"></div>
         </main>

@@ -230,6 +230,23 @@ head {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
 
+
+
+}
+
+
+.card-especializacoes {
+   position: absolute;/* Necessário para o posicionamento absoluto funcionar */
+    background: #3d3d3d;
+    padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+    margin-top: -398px;
+    margin-left: 680px;
+    width: 300px; /* Aumenta o espaço à direita para os quadrados */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
 }
 
 
@@ -248,6 +265,10 @@ head {
 
 
 .linha-poder {
+    margin-top: 21px;
+}
+
+.linha-especializacao {
     margin-top: 21px;
 }
 
