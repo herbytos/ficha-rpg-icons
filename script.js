@@ -95,7 +95,10 @@ const meuInput = document.getElementById('meu-input');
 const toastNotification = document.getElementById('notificacao');
 const toastMessage = document.getElementById('messangem');
 
-// Variável para controlar o timer
+
+
+
+
 let timerId = null;
 
 
@@ -103,9 +106,6 @@ toastNotification.addEventListener('click', () => {
     clearTimeout(timerId);
     toastNotification.classList.remove('show');
 });
-
-
-
 
 
 
@@ -118,8 +118,8 @@ meuInput.addEventListener('input', function() {
     // Procura por um elemento <option> dentro do datalist
     // que tenha o 'value' EXATAMENTE igual ao valor do input.
     const opcaoCorrespondente = document.querySelector(`#lista-de-origens option[value="${valorAtual}"]`);
-    
-    
+
+
 
     // Se uma opção correspondente foi encontrada (ou seja, o usuário selecionou ou digitou um valor válido)...
     if (opcaoCorrespondente) {
@@ -128,6 +128,21 @@ meuInput.addEventListener('input', function() {
         showToast(mensagem);
     }
 });
+
+
+// 3. Função para mostrar o Toast 
+function showToast(message) {
+    if (timerId) {
+        clearTimeout(timerId);
+    }
+
+    toastMessage.textContent = message;
+    toastNotification.classList.add('show');
+
+    timerId = setTimeout(() => {
+        toastNotification.classList.remove('show');
+    }, 30000); // A notificação fica visível por 30 segundos
+}
 
 
 
