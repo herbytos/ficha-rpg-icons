@@ -214,6 +214,7 @@ head {
     width: 290px;
 	padding-right: 40px; /* Aumenta o espaço à direita para os quadrados */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 360px;
 
 
 }
@@ -228,7 +229,7 @@ head {
     margin-left: 350px;
     width: 300px; /* Aumenta o espaço à direita para os quadrados */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+    height: 360px;
 
 
 
@@ -245,10 +246,31 @@ head {
     margin-left: 680px;
     width: 300px; /* Aumenta o espaço à direita para os quadrados */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 360px;
 
 
 }
 
+#anotacoestext {
+    height: 270px;
+    width: 100%;
+    resize: none; /* Impede o redimensionamento do textarea */
+}
+
+
+.card-anotacoes {
+   position: absolute;/* Necessário para o posicionamento absoluto funcionar */
+    background: #3d3d3d;
+    padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+    margin-top: -398px;
+    margin-left: 1010px;
+    width: 300px; /* Aumenta o espaço à direita para os quadrados */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 360px;
+
+}
 
 .coluna-direita {
 	margin-top: 30px;
@@ -326,6 +348,54 @@ head {
     align-items: center;  
 }
 
+.dado {
+    position: absolute;
+    background-color: #2d2d2d;
+    top: -70px; 
+    left: 1280px; 
+    background-color: #2d2d2d; 
+    width: 150px;
+    height: 150px;
+    border-radius: 20px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    display: flex;                 
+    flex-direction: column;        
+    justify-content: flex-start;   
+    align-items: center;  
+}
+
+.imagem-dado {
+    color: white;
+    width: 80px;
+    height: 80px;
+    margin-top: -4px;
+    
+}
+
+#botao-dado {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.bonus {
+    position: absolute;
+    background-color: #2d2d2d;
+    top: -70px; 
+    left: 1450px; 
+    background-color: #2d2d2d; 
+    width: 150px;
+    height: 150px;
+    border-radius: 20px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    display: flex;                 
+    flex-direction: column;        
+    justify-content: flex-start;   
+    align-items: center;  
+}
+
 .titulo {
   color: white;
   font-size: 30px; 
@@ -336,6 +406,23 @@ head {
 .titulo-determinacao {
   color: white;
   font-size: 23px; 
+  font-weight: bold;
+  min-width: 1px;
+
+}
+
+.titulo-dado {
+  color: white;
+  font-size: 30px; 
+  font-weight: bold;
+  min-width: 1px;
+
+
+}
+
+.titulo-bonus {
+  color: white;
+  font-size: 30px; 
   font-weight: bold;
   min-width: 1px;
 
@@ -353,6 +440,39 @@ head {
     margin-top: 10px;
     font-weight: bold;
     }
+
+
+    #input-bonus {
+    font-family: "Fugaz One", sans-serif;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px; 
+    width: 30px; 
+    text-align: center; 
+    margin-top: -40px;
+    margin-left: 104px;
+    font-weight: bold;
+    }
+
+.container-bonus {
+    /* Ativa a caixa flexível */
+    display: flex; 
+    flex-direction: column;
+    
+    /* Centraliza os itens no eixo horizontal */
+    justify-content: center; 
+    
+    /* Alinha a altura do + e do 0 perfeitamente no meio */
+    align-items: center; 
+    
+    /* Um pequeno espaço entre o sinal e o número */
+    gap: 5px; 
+}
+
+
+
 
 .valor-energia { 
     color: white;

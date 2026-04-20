@@ -130,6 +130,26 @@ meuInput.addEventListener('input', function() {
 });
 
 
+
+
+document.getElementById('botao-dado').addEventListener('click', rolardados);
+
+bonusInput = document.getElementById('input-bonus');
+
+function rolardados() {
+    const resultado = Math.floor(Math.random() * 6) + 1; // Gera um número entre 1 e 6
+    console.log(`Dado rolado: ${resultado}`);
+
+    const bonusValor = parseInt(bonusInput.value) || 0; // Pega o valor do bônus e converte para número
+
+    showToast(`Você rolou um ${resultado} + ${bonusValor} = ${resultado + bonusValor} !`);
+    return resultado;
+
+    
+  
+}
+
+
 // 3. Função para mostrar o Toast 
 function showToast(message) {
     if (timerId) {
@@ -149,7 +169,7 @@ function showToast(message) {
 
 
 // SALVAR E CARREGAR DADOS DA FICHA
-const inputsdaficha = document.querySelectorAll('.container-ficha input');
+const inputsdaficha = document.querySelectorAll('.container-ficha input, .container-ficha textarea');
 
 
 const botaoSalvar = document.getElementById('salvar');
@@ -182,6 +202,11 @@ function salvarDados() {
 
     alert('Ficha salva com sucesso!');
 }
+
+
+
+
+
 
 
 
