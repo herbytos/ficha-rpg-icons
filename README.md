@@ -28,11 +28,11 @@ Chega de apagar e reescrever pontos de Determinação ou fazer contas de poder n
 
 [x] Cálculos Automáticos: Atributos como Energia são calculados automaticamente.
 
-[ ] Rolagem de Dados: Botões integrados para rolar dados de atributos e poderes diretamente na ficha.
+[x] Rolagem de Dados: Botões integrados para rolar dados de atributos e poderes diretamente na ficha.
 
 [x] Gerenciamento de Poderes: Adicione e edite os poderes do seu personagem com facilidade.
 
-[ ] Controle de Pontos de Determinação: Gaste e recupere pontos com apenas um clique.
+[x] Controle de Pontos de Determinação: Gaste e recupere pontos com apenas um clique.
 
 [x] Modo Noturno: Um tema escuro para sessões de jogo até tarde da noite.
 
