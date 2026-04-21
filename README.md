@@ -42,7 +42,8 @@ Chega de apagar e reescrever pontos de Determinação ou fazer contas de poder n
 
 ## 📸 Screenshot
 
-<img width="1919" height="974" alt="image" src="https://github.com/user-attachments/assets/991a24b6-7590-4bfd-a855-9b5175d6dd64" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/851562db-55ff-4ceb-992b-7ef5e811d8d3" />
+
 
 
 ## 🛠️ Tecnologias Utilizadas
